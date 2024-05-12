@@ -30,7 +30,25 @@ export const  register = async (req,res) =>{
 }
 }
 
-export const  login = (req,res) => {
+export const  login =async(req,res) => {
+    const {username,password} = req.body
+
+    // check if user exist
+ 
+
+    try {
+        const user = await prisma.user.findUnique({
+            where:{username:username}
+        })
+        if(!user) return res.status(404).json({message:"user cant find"})
+    }catch(err){
+     console.log(err)
+     res.status(500).json({message:"failed to login"})
+    }
+
+    //check if password correct
+
+    // generate cookie
 }
 
 export const  logout = (req,res) => {
