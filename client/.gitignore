@@ -1,0 +1,63 @@
+# Yorumlar "#" işareti ile başlar
+
+# Derleme dosyaları ve uygulama içindeki geçici dosyalar
+*.o
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+*.class
+
+# Uygulama içindeki oluşturulan dosyalar
+bin/
+build/
+dist/
+
+# Ortam dosyaları
+.env
+.env.*
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# Yedek dosyalar
+*~
+*.bak
+
+# Özel kullanıcı dosyaları
+user-specific-file.txt
+
+# Proje belgeleri için belirli dosya uzantıları
+*.doc
+*.docx
+*.pdf
+
+# Sıkıştırılmış dosyalar
+*.zip
+*.rar
+*.gz
+
+# IDE ve editör özellik dosyaları
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.komodo*
+*.komodoproject*
+.komodotools/
+
+# Yerel kurulum dosyaları
+node_modules/
+*.log
+npm-debug.log*
+
+# Görsel düzenleme araçları tarafından oluşturulan dosyalar
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# Yerel yapılandırma dosyaları
+config.js
