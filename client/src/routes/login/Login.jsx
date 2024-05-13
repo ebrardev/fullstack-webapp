@@ -12,6 +12,7 @@ function Login() {
   const handleSubmit = async(e) =>{
     e.preventDefault()
     setIsLoading(true)
+    setError("")
     const formData = new FormData(e.target)
 
     const username= formData.get("username")
@@ -24,7 +25,8 @@ function Login() {
       password
 
     })
-   navigate("/login")
+    console.log(res)
+  //  navigate("/login")
    }catch(err){
 
   console.log(err)
