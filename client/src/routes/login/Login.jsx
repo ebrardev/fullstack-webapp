@@ -5,10 +5,12 @@ import axios from "axios"
 
 function Login() {
   const [error,setError] = useState("")
+  const [isLoading,setIsLoading] = useState(false)
   const navigate= useNavigate()
 
   const handleSubmit = async(e) =>{
     e.preventDefault()
+    setIsLoading(true)
     const formData = new FormData(e.target)
 
     const username= formData.get("username")
@@ -26,6 +28,8 @@ function Login() {
   console.log(err)
   setError(err.response.data.message)
 
+   }finally {
+    setIsLoading(false)
    }
   }
   return (
@@ -35,7 +39,7 @@ function Login() {
           <h1>Welcome back</h1>
           <input name="username" required minLength={3} maxLength={20} type="text" placeholder="Username" />
           <input name="password" required type="password" placeholder="Password" />
-          <button>Login</button>
+          <button disabled={isLoading}>Login</button>
           {error && <span> {error}!</span>}
           <Link to="/register">{"Don't"} you have an account?</Link>
         </form>
