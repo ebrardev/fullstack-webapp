@@ -9,6 +9,12 @@ import { AuthContext } from "../../context/AuthContext";
 function ProfilePage() {
   const {updateUser,currentUser} = useContext(AuthContext)
   const navigate= useNavigate()
+
+  // useEffect(()=>{
+  //   if(!currentUser) {
+  //     navigate("/login")
+  //   }
+  // },[currentUser,navigate])
   const   handleLogout = async () => {
     try{
    
@@ -20,6 +26,7 @@ function ProfilePage() {
     }
   }
   return (
+   
     <div className="profilePage">
       <div className="details">
         <div className="wrapper">
@@ -60,7 +67,9 @@ function ProfilePage() {
         </div>
       </div>
     </div>
+    
   );
+
 }
 
 export default ProfilePage;

@@ -2,7 +2,8 @@
 
 import PageHome from "./routes/PageHome/pageHome"
 
-import Layout from "./routes/layout/layout"
+import {Layout,RequireAuth} from "./routes/layout/layout"
+
 import ListPage from "./routes/listPage/listPage"
 import {
   createBrowserRouter,
@@ -35,10 +36,7 @@ function App() {
             path:"/:id",
             element: <SinglePage/>
           },
-          {
-            path:"/profile",
-            element: <ProfilePage/>
-          },
+      
           {
             path:"/login",
             element: <Login/>
@@ -51,6 +49,16 @@ function App() {
         ]
       
     },
+    {
+      path:"/",
+      element:<RequireAuth/>,
+      children:[
+        {
+          path:"/profile",
+          element: <ProfilePage/>
+        },
+      ]
+    }
   
   ])
   return (
