@@ -53,7 +53,8 @@ export const  login =async (req,res) => {
     // res.setHeader("Set-Cookie", "test="+"myValue").json("success")
     const age = 1000*60*60*24*7
     const token =jwt.sign({
-        id:user.id
+        id:user.id,
+        isAdmin:true
     },process.env.JWT_SECRET_KEY,
 {expiresIn:age})
 
