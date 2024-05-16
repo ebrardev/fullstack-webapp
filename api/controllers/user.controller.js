@@ -39,7 +39,7 @@ export const updateUser = async (req,res) =>{
             data:body
         })
 
-        res.status(200).json(updateUser)
+        res.status(200).json(updatedUser)
 
     }catch(err) {
         console.log(err)
