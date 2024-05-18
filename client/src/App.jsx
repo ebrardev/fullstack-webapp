@@ -36,7 +36,8 @@ function App() {
           },
           {
             path:"/:id",
-            element: <SinglePage/>
+            element: <SinglePage/>,
+            loader: SinglePageLoader,
           },
       
           {
