@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./searchbar.scss";
+import "./searchBar.scss";
 import { Link } from "react-router-dom";
 
 const types = ["buy", "rent"];
