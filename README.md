@@ -46,7 +46,7 @@
 
 ## Usage
 
-- Once the application is running, navigate to `localhost:3000` in your browser.
+- Once the application is running, navigate to `localhost:5173` in your browser.
 - Sign up or log in.
 - Explore the application and perform X functionality.
 - Go to X for live chat feature and interact with other users.
