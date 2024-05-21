@@ -1,4 +1,4 @@
-# Project Name
+# Estate app
 
 **Project Description:** This project is a web application built using the MERN (MongoDB, Express, React, Node.js) stack. It enables users to perform X functionality.
 
